@@ -263,7 +263,7 @@ namespace AdvantechDebug
                             }
                             else
                             {
-                                AnalyseMessage(msgRead);
+                                AnalyseMessage(msgRead[j]);
                                 for (int i = 0; i < msgRead[j].length; i++)
                                 {
                                     ReceiveStatus += msgRead[j].data[i].ToString();
@@ -281,16 +281,16 @@ namespace AdvantechDebug
             ShowStatus.Invoke(SetList, "Stop Read!");
         }
 
-        void AnalyseMessage(AdvCan.canmsg_t[] msgRead)
+        void AnalyseMessage(AdvCan.canmsg_t msgRead)
         {
-            byte MsgID =(byte)(msgRead[0].id & 0xFF);
-            int BPID = (int)(msgRead[0].id >> 8) & 0x3F;
-            int StringID = (int)(msgRead[0].id >> 14) & 0x0F;
+            byte MsgID =(byte)(msgRead.id & 0xFF);
+            int BPID = (int)(msgRead.id >> 8) & 0x3F;
+            int StringID = (int)(msgRead.id >> 14) & 0x0F;
 
             switch (MsgID)
             {
                 case (byte)StringMessageID.TargetVol:
-                    textBox1.Invoke(new MethodInvoker(delegate { textBox1.Text = (msgRead[0].data[0] * 256 + msgRead[0].data[1]).ToString(); }));
+                    textBox1.Invoke(new MethodInvoker(delegate { textBox1.Text = (msgRead.data[0] * 256 + msgRead.data[1]).ToString(); }));
                     break;
                 
                 case (byte)StringMessageID.SelectedBP1_4Vol:                    
@@ -308,26 +308,30 @@ namespace AdvantechDebug
             }
         }
 
-        void VoltageCal(AdvCan.canmsg_t[] msgRead)
+        void VoltageCal(AdvCan.canmsg_t msgRead)
         {
-            byte MsgID = (byte)(msgRead[0].id & 0xFF);
-            int BPID = (int)(msgRead[0].id >> 8) & 0x3F;
+            byte MsgID = (byte)(msgRead.id & 0xFF);
+            int BPID = (int)(msgRead.id >> 8) & 0x3F;
             int index = (int)(MsgID - StringMessageID.SelectedBP1_4Vol);
+            if (BPID == 0)
+                return;
             for (int i = 0; i < 4; i++)
             {
-                cellvol[i + index * 4] = (float)(msgRead[0].data[2 * i] * 256 + msgRead[0].data[2 * i + 1]) / 1000;
+                cellvol[i + index * 4] = (float)(msgRead.data[2 * i] * 256 + msgRead.data[2 * i + 1]) / 1000;
                 BindingListVolTemp[BPID - 1][i + index * 4] = new VolTemp { Vol = cellvol[i + index * 4].ToString(), Temp = celltemp[i + index * 4].ToString() };
             }
         }
 
-        void TempCal(AdvCan.canmsg_t[] msgRead)
+        void TempCal(AdvCan.canmsg_t msgRead)
         {
-            byte MsgID = (byte)(msgRead[0].id & 0xFF);
-            int BPID = (int)(msgRead[0].id >> 8) & 0x3F;
-            int index = (int)(MsgID - StringMessageID.SelectedBP1_4Vol);
+            byte MsgID = (byte)(msgRead.id & 0xFF);
+            int BPID = (int)(msgRead.id >> 8) & 0x3F;
+            if (BPID == 0)
+                return;
+            int index = (int)(MsgID - StringMessageID.SelectedBP1_4Temp);
             for (int i = 0; i < 4; i++)
             {
-                celltemp[i + index * 4] = (float)(msgRead[0].data[2 * i] * 256 + msgRead[0].data[2 * i + 1]) / 100;
+                celltemp[i + index * 4] = (float)(msgRead.data[2 * i] * 256 + msgRead.data[2 * i + 1]) / 10;
                 BindingListVolTemp[BPID - 1][i + index * 4] = new VolTemp { Vol = cellvol[i + index * 4].ToString(), Temp = celltemp[i + index * 4].ToString() };
             }
         }
@@ -370,13 +374,12 @@ namespace AdvantechDebug
         private void timer1_Tick(object sender, EventArgs e)
         {
             AdvCan.canmsg_t[] msgWrite = new AdvCan.canmsg_t[GlobalVar.MaxMsgCount];
-            uint pulNumberofWritten = 1;
+            uint pulNumberofWritten = 0;
             msgWrite[0].flags = AdvCan.MSG_EXT;
             msgWrite[0].cob = 0;
             msgWrite[0].id = 0X800A2;
             msgWrite[0].length = 0;
-             Device.acCanWrite(msgWrite, 1, ref pulNumberofWritten); //Send frames
-
+            Device.acCanWrite(msgWrite, 1, ref pulNumberofWritten); //Send frames
         }
 
         private void comboBoxBpNumber_SelectedIndexChanged(object sender, EventArgs e)

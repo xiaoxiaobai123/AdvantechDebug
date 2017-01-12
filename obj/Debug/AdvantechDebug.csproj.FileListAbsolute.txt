@@ -9,3 +9,14 @@ C:\Users\wojia\Documents\GitHub\AdvantechDebug\AdvantechDebug\obj\Debug\Advantec
 C:\Users\wojia\Documents\GitHub\AdvantechDebug\AdvantechDebug\obj\Debug\AdvantechDebug.csprojResolveAssemblyReference.cache
 C:\Users\wojia\Documents\GitHub\AdvantechDebug\AdvantechDebug\obj\Debug\AdvantechDebug.Form2.resources
 C:\Users\wojia\Documents\GitHub\AdvantechDebug\AdvantechDebug\obj\Debug\AdvantechDebug.Form3.resources
+C:\Users\Advantech602\Desktop\AdvantechDebug\AdvantechDebug\bin\Debug\AdvantechDebug.exe.config
+C:\Users\Advantech602\Desktop\AdvantechDebug\AdvantechDebug\obj\Debug\AdvantechDebug.exe
+C:\Users\Advantech602\Desktop\AdvantechDebug\AdvantechDebug\obj\Debug\AdvantechDebug.pdb
+C:\Users\Advantech602\Desktop\AdvantechDebug\AdvantechDebug\bin\Debug\AdvantechDebug.exe
+C:\Users\Advantech602\Desktop\AdvantechDebug\AdvantechDebug\bin\Debug\AdvantechDebug.pdb
+C:\Users\Advantech602\Desktop\AdvantechDebug\AdvantechDebug\obj\Debug\AdvantechDebug.csprojResolveAssemblyReference.cache
+C:\Users\Advantech602\Desktop\AdvantechDebug\AdvantechDebug\obj\Debug\AdvantechDebug.Form1.resources
+C:\Users\Advantech602\Desktop\AdvantechDebug\AdvantechDebug\obj\Debug\AdvantechDebug.Form2.resources
+C:\Users\Advantech602\Desktop\AdvantechDebug\AdvantechDebug\obj\Debug\AdvantechDebug.Form3.resources
+C:\Users\Advantech602\Desktop\AdvantechDebug\AdvantechDebug\obj\Debug\AdvantechDebug.Properties.Resources.resources
+C:\Users\Advantech602\Desktop\AdvantechDebug\AdvantechDebug\obj\Debug\AdvantechDebug.csproj.GenerateResource.Cache

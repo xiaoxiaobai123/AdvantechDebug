@@ -33,7 +33,7 @@
       <Value Profile="(Default)">100</Value>
     </Setting>
     <Setting Name="CellNumbers" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">16</Value>
+      <Value Profile="(Default)">12</Value>
     </Setting>
   </Settings>
 </SettingsFile>
