@@ -1,0 +1,39 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AdvantechDebug" GeneratedClassName="CanSettings">
+  <Profiles />
+  <Settings>
+    <Setting Name="BpNumbers" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">22</Value>
+    </Setting>
+    <Setting Name="StringNumbers" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">9</Value>
+    </Setting>
+    <Setting Name="CANPort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">can1</Value>
+    </Setting>
+    <Setting Name="CANBaudrate" Type="System.String" Scope="User">
+      <Value Profile="(Default)">125</Value>
+    </Setting>
+    <Setting Name="CanAcceptanceFilterMode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Single</Value>
+    </Setting>
+    <Setting Name="CanAcceptanceMask" Type="System.String" Scope="User">
+      <Value Profile="(Default)">FFFFFFFF</Value>
+    </Setting>
+    <Setting Name="CanAcceptanceCode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">FFFFFFFF</Value>
+    </Setting>
+    <Setting Name="CanWriteTimeOut" Type="System.String" Scope="User">
+      <Value Profile="(Default)">3000</Value>
+    </Setting>
+    <Setting Name="CanReadTimeOut" Type="System.String" Scope="User">
+      <Value Profile="(Default)">3000</Value>
+    </Setting>
+    <Setting Name="CanMaxMsgCount" Type="System.String" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="CellNumbers" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">16</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

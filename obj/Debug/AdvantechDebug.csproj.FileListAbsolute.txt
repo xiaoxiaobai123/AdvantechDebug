@@ -1,0 +1,11 @@
+C:\Users\wojia\Documents\GitHub\AdvantechDebug\AdvantechDebug\bin\Debug\AdvantechDebug.exe.config
+C:\Users\wojia\Documents\GitHub\AdvantechDebug\AdvantechDebug\bin\Debug\AdvantechDebug.exe
+C:\Users\wojia\Documents\GitHub\AdvantechDebug\AdvantechDebug\bin\Debug\AdvantechDebug.pdb
+C:\Users\wojia\Documents\GitHub\AdvantechDebug\AdvantechDebug\obj\Debug\AdvantechDebug.Form1.resources
+C:\Users\wojia\Documents\GitHub\AdvantechDebug\AdvantechDebug\obj\Debug\AdvantechDebug.Properties.Resources.resources
+C:\Users\wojia\Documents\GitHub\AdvantechDebug\AdvantechDebug\obj\Debug\AdvantechDebug.csproj.GenerateResource.Cache
+C:\Users\wojia\Documents\GitHub\AdvantechDebug\AdvantechDebug\obj\Debug\AdvantechDebug.exe
+C:\Users\wojia\Documents\GitHub\AdvantechDebug\AdvantechDebug\obj\Debug\AdvantechDebug.pdb
+C:\Users\wojia\Documents\GitHub\AdvantechDebug\AdvantechDebug\obj\Debug\AdvantechDebug.csprojResolveAssemblyReference.cache
+C:\Users\wojia\Documents\GitHub\AdvantechDebug\AdvantechDebug\obj\Debug\AdvantechDebug.Form2.resources
+C:\Users\wojia\Documents\GitHub\AdvantechDebug\AdvantechDebug\obj\Debug\AdvantechDebug.Form3.resources
